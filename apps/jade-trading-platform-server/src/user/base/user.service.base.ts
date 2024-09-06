@@ -18,6 +18,8 @@ import {
 } from "@prisma/client";
 import { PasswordService } from "../../auth/password.service";
 import { transformStringFieldUpdateInput } from "../../prisma.util";
+import { UpdateUserArgs } from "./UpdateUserArgs";
+import { User } from "./User";
 
 export class UserServiceBase {
   constructor(
@@ -86,5 +88,8 @@ export class UserServiceBase {
         where: { id: parentId },
       })
       .jades(args);
+  }
+  async MyAuctions(args: UpdateUserArgs): Promise<User[]> {
+    throw new Error("Not implemented");
   }
 }

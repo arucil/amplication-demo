@@ -139,4 +139,12 @@ export class UserResolverBase {
 
     return results;
   }
+
+  @graphql.Query(() => [User])
+  async MyAuctions(
+    @graphql.Args()
+    args: UpdateUserArgs
+  ): Promise<User[]> {
+    return this.service.MyAuctions(args);
+  }
 }
