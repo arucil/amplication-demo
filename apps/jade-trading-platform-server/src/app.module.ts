@@ -1,3 +1,4 @@
+import { RabbitMQModule } from "./rabbitmq/rabbitmq.module";
 import { Module } from "@nestjs/common";
 import { JadeModule } from "./jade/jade.module";
 import { AuctionModule } from "./auction/auction.module";
@@ -20,6 +21,7 @@ import { AuthModule } from "./auth/auth.module";
   controllers: [],
   imports: [
     StorageModule,
+    RabbitMQModule,
     ACLModule,
     AuthModule,
     JadeModule,
