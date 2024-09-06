@@ -32,6 +32,7 @@ import { BidWhereUniqueInput } from "../../bid/base/BidWhereUniqueInput";
 import { JadeFindManyArgs } from "../../jade/base/JadeFindManyArgs";
 import { Jade } from "../../jade/base/Jade";
 import { JadeWhereUniqueInput } from "../../jade/base/JadeWhereUniqueInput";
+import { UpdateUserArgs } from "./UpdateUserArgs";
 
 @swagger.ApiBearerAuth()
 @common.UseGuards(defaultAuthGuard.DefaultAuthGuard, nestAccessControl.ACGuard)
@@ -386,5 +387,22 @@ export class UserControllerBase {
       data,
       select: { id: true },
     });
+  }
+
+  @common.Get("/my")
+  @swagger.ApiOkResponse({
+    type: User,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async MyAuctions(
+    @common.Body()
+    body: UpdateUserArgs
+  ): Promise<User[]> {
+    return this.service.MyAuctions(body);
   }
 }
