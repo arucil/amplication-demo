@@ -75,6 +75,7 @@ export class AuctionControllerBase {
 
         startingPrice: true,
         startingTime: true,
+        status: true,
         updatedAt: true,
       },
     });
@@ -110,6 +111,7 @@ export class AuctionControllerBase {
 
         startingPrice: true,
         startingTime: true,
+        status: true,
         updatedAt: true,
       },
     });
@@ -146,6 +148,7 @@ export class AuctionControllerBase {
 
         startingPrice: true,
         startingTime: true,
+        status: true,
         updatedAt: true,
       },
     });
@@ -199,6 +202,7 @@ export class AuctionControllerBase {
 
           startingPrice: true,
           startingTime: true,
+          status: true,
           updatedAt: true,
         },
       });
@@ -243,6 +247,7 @@ export class AuctionControllerBase {
 
           startingPrice: true,
           startingTime: true,
+          status: true,
           updatedAt: true,
         },
       });

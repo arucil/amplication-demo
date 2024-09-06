@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
 import { JadeModule } from "./jade/jade.module";
-import { BidModule } from "./bid/bid.module";
 import { AuctionModule } from "./auction/auction.module";
+import { BidModule } from "./bid/bid.module";
 import { UserModule } from "./user/user.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
@@ -23,8 +23,8 @@ import { AuthModule } from "./auth/auth.module";
     ACLModule,
     AuthModule,
     JadeModule,
-    BidModule,
     AuctionModule,
+    BidModule,
     UserModule,
     HealthModule,
     PrismaModule,

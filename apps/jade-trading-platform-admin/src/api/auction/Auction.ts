@@ -10,5 +10,6 @@ export type Auction = {
   jade?: Jade | null;
   startingPrice: number | null;
   startingTime: Date | null;
+  status?: "Option1" | null;
   updatedAt: Date;
 };

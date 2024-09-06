@@ -28,6 +28,7 @@ export const AuctionShow = (props: ShowProps): React.ReactElement => {
         </ReferenceField>
         <TextField label="startingPrice" source="startingPrice" />
         <TextField label="startingTime" source="startingTime" />
+        <TextField label="status" source="status" />
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceManyField reference="Bid" target="auctionId" label="Bids">
           <Datagrid rowClick="show">

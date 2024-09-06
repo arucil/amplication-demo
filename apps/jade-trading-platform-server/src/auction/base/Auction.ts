@@ -20,9 +20,11 @@ import {
   Min,
   Max,
   IsString,
+  IsEnum,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Jade } from "../../jade/base/Jade";
+import { EnumAuctionStatus } from "./EnumAuctionStatus";
 
 @ObjectType()
 class Auction {
@@ -107,6 +109,17 @@ class Auction {
     nullable: true,
   })
   startingTime!: Date | null;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumAuctionStatus,
+  })
+  @IsEnum(EnumAuctionStatus)
+  @IsOptional()
+  @Field(() => EnumAuctionStatus, {
+    nullable: true,
+  })
+  status?: "Option1" | null;
 
   @ApiProperty({
     required: true,

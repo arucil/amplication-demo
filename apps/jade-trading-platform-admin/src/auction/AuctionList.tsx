@@ -29,6 +29,7 @@ export const AuctionList = (props: ListProps): React.ReactElement => {
         </ReferenceField>
         <TextField label="startingPrice" source="startingPrice" />
         <TextField label="startingTime" source="startingTime" />
+        <TextField label="status" source="status" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>

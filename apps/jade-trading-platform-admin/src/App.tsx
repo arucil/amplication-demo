@@ -9,14 +9,14 @@ import { JadeList } from "./jade/JadeList";
 import { JadeCreate } from "./jade/JadeCreate";
 import { JadeEdit } from "./jade/JadeEdit";
 import { JadeShow } from "./jade/JadeShow";
-import { BidList } from "./bid/BidList";
-import { BidCreate } from "./bid/BidCreate";
-import { BidEdit } from "./bid/BidEdit";
-import { BidShow } from "./bid/BidShow";
 import { AuctionList } from "./auction/AuctionList";
 import { AuctionCreate } from "./auction/AuctionCreate";
 import { AuctionEdit } from "./auction/AuctionEdit";
 import { AuctionShow } from "./auction/AuctionShow";
+import { BidList } from "./bid/BidList";
+import { BidCreate } from "./bid/BidCreate";
+import { BidEdit } from "./bid/BidEdit";
+import { BidShow } from "./bid/BidShow";
 import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
@@ -55,18 +55,18 @@ const App = (): React.ReactElement => {
           show={JadeShow}
         />
         <Resource
-          name="Bid"
-          list={BidList}
-          edit={BidEdit}
-          create={BidCreate}
-          show={BidShow}
-        />
-        <Resource
           name="Auction"
           list={AuctionList}
           edit={AuctionEdit}
           create={AuctionCreate}
           show={AuctionShow}
+        />
+        <Resource
+          name="Bid"
+          list={BidList}
+          edit={BidEdit}
+          create={BidCreate}
+          show={BidShow}
         />
         <Resource
           name="User"

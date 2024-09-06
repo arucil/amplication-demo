@@ -12,12 +12,13 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { BidListRelationFilter } from "../../bid/base/BidListRelationFilter";
-import { ValidateNested, IsOptional } from "class-validator";
+import { ValidateNested, IsOptional, IsEnum } from "class-validator";
 import { Type } from "class-transformer";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { JadeWhereUniqueInput } from "../../jade/base/JadeWhereUniqueInput";
+import { EnumAuctionStatus } from "./EnumAuctionStatus";
 
 @InputType()
 class AuctionWhereInput {
@@ -99,6 +100,17 @@ class AuctionWhereInput {
     nullable: true,
   })
   startingTime?: DateTimeNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumAuctionStatus,
+  })
+  @IsEnum(EnumAuctionStatus)
+  @IsOptional()
+  @Field(() => EnumAuctionStatus, {
+    nullable: true,
+  })
+  status?: "Option1";
 }
 
 export { AuctionWhereInput as AuctionWhereInput };

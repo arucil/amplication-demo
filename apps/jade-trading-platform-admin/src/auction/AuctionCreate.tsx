@@ -34,6 +34,14 @@ export const AuctionCreate = (props: CreateProps): React.ReactElement => {
         </ReferenceInput>
         <NumberInput label="startingPrice" source="startingPrice" />
         <DateTimeInput label="startingTime" source="startingTime" />
+        <SelectInput
+          source="status"
+          label="status"
+          choices={[{ label: "Option 1", value: "Option1" }]}
+          optionText="label"
+          allowEmpty
+          optionValue="value"
+        />
       </SimpleForm>
     </Create>
   );
