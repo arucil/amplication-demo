@@ -8,5 +8,6 @@ export type AuctionOrderByInput = {
   jadeId?: SortOrder;
   startingPrice?: SortOrder;
   startingTime?: SortOrder;
+  status?: SortOrder;
   updatedAt?: SortOrder;
 };

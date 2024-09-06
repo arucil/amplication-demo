@@ -12,4 +12,5 @@ export type AuctionWhereInput = {
   jade?: JadeWhereUniqueInput;
   startingPrice?: FloatNullableFilter;
   startingTime?: DateTimeNullableFilter;
+  status?: "Option1";
 };

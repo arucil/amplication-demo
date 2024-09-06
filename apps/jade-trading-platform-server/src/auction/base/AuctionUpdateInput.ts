@@ -19,9 +19,11 @@ import {
   IsNumber,
   Min,
   Max,
+  IsEnum,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { JadeWhereUniqueInput } from "../../jade/base/JadeWhereUniqueInput";
+import { EnumAuctionStatus } from "./EnumAuctionStatus";
 
 @InputType()
 class AuctionUpdateInput {
@@ -96,6 +98,17 @@ class AuctionUpdateInput {
     nullable: true,
   })
   startingTime?: Date | null;
+
+  @ApiProperty({
+    required: false,
+    enum: EnumAuctionStatus,
+  })
+  @IsEnum(EnumAuctionStatus)
+  @IsOptional()
+  @Field(() => EnumAuctionStatus, {
+    nullable: true,
+  })
+  status?: "Option1" | null;
 }
 
 export { AuctionUpdateInput as AuctionUpdateInput };

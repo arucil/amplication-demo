@@ -377,6 +377,7 @@ export class JadeControllerBase {
 
         startingPrice: true,
         startingTime: true,
+        status: true,
         updatedAt: true,
       },
     });

@@ -8,4 +8,5 @@ export type AuctionUpdateInput = {
   jade?: JadeWhereUniqueInput | null;
   startingPrice?: number | null;
   startingTime?: Date | null;
+  status?: "Option1" | null;
 };
