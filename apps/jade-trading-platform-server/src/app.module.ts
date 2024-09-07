@@ -4,6 +4,7 @@ import { JadeModule } from "./jade/jade.module";
 import { AuctionModule } from "./auction/auction.module";
 import { BidModule } from "./bid/bid.module";
 import { UserModule } from "./user/user.module";
+import { NvmModule } from "./nvm/nvm.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -28,6 +29,7 @@ import { AuthModule } from "./auth/auth.module";
     AuctionModule,
     BidModule,
     UserModule,
+    NvmModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
